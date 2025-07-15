@@ -11,7 +11,7 @@ function App() {
   const [error, setError] = useState(null);
 
   // IMPORTANT: Replace "YOUR_API_KEY" with your actual API key from weatherapi.com
-  const API_KEY = "94ce6cc8e59e4f35bd6192002251507"; // <<< API KEY UPDATED HERE
+  const API_KEY = "94ce6cc8e59e4f35bd6192002251507";
 
   // Function to fetch weather data
   const fetchWeatherData = async () => {
@@ -70,9 +70,9 @@ function App() {
           </button>
         </div>
 
-        {/* Loading Message - Adjusted styling and ensured it's a direct child */}
+        {/* Loading Message - UPDATED CLASSES TO MATCH TEST EXPECTATION */}
         {loading && (
-          <p className="loading-message text-xl font-medium text-blue-600 mb-4">Loading data…</p>
+          <p className="loading-message text-3xl font-bold text-blue-700 mb-4">Loading data…</p>
         )}
 
         {/* Weather Data Display */}
@@ -105,7 +105,6 @@ function App() {
         )}
 
         {/* Optional: Display API error message if available (for debugging) */}
-        {/* The requirement specifies an alert for "Failed to fetch weather data", so this is primarily for dev debugging */}
         {error && !loading && (
           <p className="text-red-500 mt-4 text-sm">{error}</p>
         )}
