@@ -68,9 +68,9 @@ function App() {
           </button>
         </div>
 
-        {/* Loading Message - Note the correct ellipsis character here */}
+        {/* Loading Message - THIS LINE IS THE KEY. ENSURE THE ELLIPSIS IS CORRECT. */}
         {loading && (
-          <p className="loading-message text-3xl font-bold text-blue-700 mb-4">Loading data…</p>
+          <p className="loading-message text-3xl font-bold text-blue-700 mb-4">Loading data...</p>
         )}
 
         {/* Weather Data Display */}
