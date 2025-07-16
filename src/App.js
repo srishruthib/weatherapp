@@ -32,7 +32,6 @@ function App() {
       if (!response.ok) {
         // Handle HTTP errors (e.g., 400 for invalid city, 401 for invalid key)
         const errorData = await response.json();
-        // Use a more generic message for the alert as per requirement
         throw new Error(errorData.error ? errorData.error.message : 'Failed to fetch weather data');
       }
 
@@ -40,9 +39,8 @@ function App() {
       setWeatherData(data); // Set the fetched weather data
     } catch (err) {
       console.error("Error fetching weather data:", err);
-      // Ensure the alert message matches the requirement exactly
       alert('Failed to fetch weather data');
-      setError(err.message); // Store error message for internal debugging if needed
+      setError(err.message);
     } finally {
       setLoading(false); // Set loading to false when fetching completes
     }
@@ -70,7 +68,7 @@ function App() {
           </button>
         </div>
 
-        {/* Loading Message - UPDATED CLASSES TO MATCH TEST EXPECTATION */}
+        {/* Loading Message - Note the correct ellipsis character here */}
         {loading && (
           <p className="loading-message text-3xl font-bold text-blue-700 mb-4">Loading data…</p>
         )}
